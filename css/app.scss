@@ -45,6 +45,24 @@
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
 
-h1{
-  color:$primary-color;
+
+header{
+	color:$secondary-color;
+	font-size:1.4rem;
+	padding:$global-padding;
+	#menu{
+		margin-top: 50px;
+		margin-bottom: 50px;
+
+		padding: $global-padding/2  $global-padding  $global-padding/2 $global-padding ;
+		border: 5px solid $primary-color;
+
+		#menu-grid{
+			a{
+				color:$secondary-color;
+				font-weight: 500;
+				text-transform: uppercase;
+			}
+		}
+	}
 }
