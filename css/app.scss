@@ -46,10 +46,22 @@
 // @include motion-ui-animations;
 
 
+/* Global style
+---------------------------------------- */
+
+h1,h2,h3,h4{
+	color: $primary-color;	
+}
+
+
+/* Header style
+---------------------------------------- */
+
 header{
 	color:$secondary-color;
 	font-size:1.4rem;
 	padding:$global-padding;
+
 	#menu{
 		margin-top: 50px;
 		margin-bottom: 50px;
@@ -58,6 +70,7 @@ header{
 		border: 5px solid $primary-color;
 
 		#menu-grid{
+
 			a{
 				color:$secondary-color;
 				font-weight: 500;
@@ -66,3 +79,60 @@ header{
 		}
 	}
 }
+section	{
+	padding: $global-padding/2 0;
+
+}
+
+/* Formation section style
+---------------------------------------- */
+
+#formation{
+
+		h3:after{
+			content: "";
+		    display: block;
+		    height: 4px;
+		    width: 100%;
+		    margin : 0 0 $global-margin 0;
+		    background: darken($secondary-color,30);
+		}
+	.formation-item{
+		h4{
+			margin-bottom: 0px;
+		}
+		.date{
+			color:$primary-color;
+			font-size: 1.5rem;
+		}
+		.description{
+			margin-bottom: $global-margin*2;
+		}
+		.learn{
+			h5{
+				color:$secondary-color;
+				
+			}
+			ul{
+				li{
+					margin-bottom: $global-margin/2
+				}
+			}
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

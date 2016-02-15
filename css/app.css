@@ -1639,6 +1639,13 @@ button {
 .is-hidden {
   display: none !important; }
 
+/* Global style
+---------------------------------------- */
+h1, h2, h3, h4 {
+  color: #4e9da6; }
+
+/* Header style
+---------------------------------------- */
 header {
   color: #d6d5cb;
   font-size: 1.4rem;
@@ -1652,3 +1659,32 @@ header {
       color: #d6d5cb;
       font-weight: 500;
       text-transform: uppercase; }
+
+section {
+  padding: 0.5rem 0; }
+
+/* Formation section style
+---------------------------------------- */
+#formation h3:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  margin: 0 0 1rem 0;
+  background: #939075; }
+
+#formation .formation-item h4 {
+  margin-bottom: 0px; }
+
+#formation .formation-item .date {
+  color: #4e9da6;
+  font-size: 1.5rem; }
+
+#formation .formation-item .description {
+  margin-bottom: 2rem; }
+
+#formation .formation-item .learn h5 {
+  color: #d6d5cb; }
+
+#formation .formation-item .learn ul li {
+  margin-bottom: 0.5rem; }
