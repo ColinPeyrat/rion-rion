@@ -84,30 +84,24 @@ section	{
 
 }
 
-/* Formation section style
+/* CV
 ---------------------------------------- */
 
-#formation{
+h3:after{
+	content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    margin : 0 0 $global-margin 0;
+    background: $secondary-color;
+}
 
-		h3:after{
-			content: "";
-		    display: block;
-		    height: 4px;
-		    width: 100%;
-		    margin : 0 0 $global-margin 0;
-		    background: $secondary-color;
-		}
-	.formation-item{
-		h4{
-			margin-bottom: 0px;
-		}
-		.date{
-			color:$primary-color;
-			font-size: 1.5rem;
-		}
-		.description{
-			margin-bottom: $global-margin*2;
-		}
+.cv{
+
+	.experience{
+
+		margin-top: $global-margin;
+		
 		.mission{
 			h5{
 				color:$secondary-color;
@@ -120,6 +114,20 @@ section	{
 					list-style: none;
 				}
 			}
+		}
+	}
+
+	.cv-item{
+
+		h4{
+			margin-bottom: 0px;
+		}
+		.date{
+			color:$primary-color;
+			font-size: 1.5rem;
+		}
+		.description{
+			margin-bottom: $global-margin*2;
 		}
 		.learn{
 			h5{
@@ -135,6 +143,23 @@ section	{
 
 	}
 }
+
+/* Contact
+---------------------------------------- */
+
+.contact{
+	margin-top:15vh;
+	font-size: 1.4rem;
+	.information{
+		color:$primary-color;
+		p{
+			font-weight: 500;
+			line-height: 1.7rem;
+			margin-bottom: 0px; 
+		}
+	}
+}
+
 
 
 

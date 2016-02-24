@@ -54,7 +54,7 @@ gulp.task('html', function () {
  */
 gulp.task('watch', function () {
     gulp.watch('css/**', ['sass']);
-    gulp.watch('index.html',['html']);
+    gulp.watch('*.html',['html']);
 });
 
 

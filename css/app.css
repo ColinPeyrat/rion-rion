@@ -1663,9 +1663,9 @@ header {
 section {
   padding: 0.5rem 0; }
 
-/* Formation section style
+/* CV
 ---------------------------------------- */
-#formation h3:after {
+h3:after {
   content: "";
   display: block;
   height: 4px;
@@ -1673,29 +1673,42 @@ section {
   margin: 0 0 1rem 0;
   background: #d6d5cb; }
 
-#formation .formation-item h4 {
+.cv .experience {
+  margin-top: 1rem; }
+  .cv .experience .mission h5 {
+    color: #d6d5cb;
+    margin-bottom: 0.25rem; }
+  .cv .experience .mission ul {
+    margin-left: 0; }
+    .cv .experience .mission ul li {
+      margin-bottom: 0.5rem;
+      list-style: none; }
+
+.cv .cv-item h4 {
   margin-bottom: 0px; }
 
-#formation .formation-item .date {
+.cv .cv-item .date {
   color: #4e9da6;
   font-size: 1.5rem; }
 
-#formation .formation-item .description {
+.cv .cv-item .description {
   margin-bottom: 2rem; }
 
-#formation .formation-item .mission h5 {
+.cv .cv-item .learn h5 {
   color: #d6d5cb;
   margin-bottom: 0.25rem; }
 
-#formation .formation-item .mission ul {
-  margin-left: 0; }
-  #formation .formation-item .mission ul li {
-    margin-bottom: 0.5rem;
-    list-style: none; }
-
-#formation .formation-item .learn h5 {
-  color: #d6d5cb;
-  margin-bottom: 0.25rem; }
-
-#formation .formation-item .learn ul li {
+.cv .cv-item .learn ul li {
   margin-bottom: 0.5rem; }
+
+/* Contact
+---------------------------------------- */
+.contact {
+  margin-top: 15vh;
+  font-size: 1.4rem; }
+  .contact .information {
+    color: #4e9da6; }
+    .contact .information p {
+      font-weight: 500;
+      line-height: 1.7rem;
+      margin-bottom: 0px; }
