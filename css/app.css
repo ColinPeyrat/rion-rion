@@ -1671,7 +1671,7 @@ section {
   height: 4px;
   width: 100%;
   margin: 0 0 1rem 0;
-  background: #939075; }
+  background: #d6d5cb; }
 
 #formation .formation-item h4 {
   margin-bottom: 0px; }
@@ -1683,8 +1683,19 @@ section {
 #formation .formation-item .description {
   margin-bottom: 2rem; }
 
+#formation .formation-item .mission h5 {
+  color: #d6d5cb;
+  margin-bottom: 0.25rem; }
+
+#formation .formation-item .mission ul {
+  margin-left: 0; }
+  #formation .formation-item .mission ul li {
+    margin-bottom: 0.5rem;
+    list-style: none; }
+
 #formation .formation-item .learn h5 {
-  color: #d6d5cb; }
+  color: #d6d5cb;
+  margin-bottom: 0.25rem; }
 
 #formation .formation-item .learn ul li {
   margin-bottom: 0.5rem; }

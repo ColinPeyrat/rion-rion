@@ -95,7 +95,7 @@ section	{
 		    height: 4px;
 		    width: 100%;
 		    margin : 0 0 $global-margin 0;
-		    background: darken($secondary-color,30);
+		    background: $secondary-color;
 		}
 	.formation-item{
 		h4{
@@ -108,14 +108,27 @@ section	{
 		.description{
 			margin-bottom: $global-margin*2;
 		}
+		.mission{
+			h5{
+				color:$secondary-color;
+				margin-bottom: $global-margin/4;
+			}
+			ul{
+				margin-left: 0;
+				li{
+					margin-bottom: $global-margin/2;
+					list-style: none;
+				}
+			}
+		}
 		.learn{
 			h5{
 				color:$secondary-color;
-				
+				margin-bottom: $global-margin/4;
 			}
 			ul{
 				li{
-					margin-bottom: $global-margin/2
+					margin-bottom: $global-margin/2;
 				}
 			}
 		}
