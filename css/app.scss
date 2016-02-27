@@ -53,6 +53,10 @@ h1,h2,h3,h4{
 	color: $primary-color;	
 }
 
+.headermobile{
+	display:none;
+}
+
 
 /* Header style
 ---------------------------------------- */
@@ -62,14 +66,14 @@ h1,h2,h3,h4{
 	font-size:1.4rem;
 	padding:$global-padding;
 
-	#menu{
+	.menu{
 		margin-top: 50px;
 		margin-bottom: 50px;
 
 		padding: $global-padding/2  $global-padding  $global-padding/2 $global-padding ;
 		border: 5px solid $primary-color;
 
-		#menu-grid{
+		.menu-grid{
 
 			a{
 				color:$secondary-color;
@@ -160,7 +164,20 @@ h3:after{
 	}
 }
 
+/* Responsive
+---------------------------------------- */
 
+
+@media screen and (max-width: 768px) {
+
+    .menu{
+        display: none;
+    }
+
+    .headermobile  {
+        display: block;
+    }
+}
 
 
 

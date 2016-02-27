@@ -1644,18 +1644,21 @@ button {
 h1, h2, h3, h4 {
   color: #4e9da6; }
 
+.headermobile {
+  display: none; }
+
 /* Header style
 ---------------------------------------- */
 .navbar {
   color: #d6d5cb;
   font-size: 1.4rem;
   padding: 1rem; }
-  .navbar #menu {
+  .navbar .menu {
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border: 5px solid #4e9da6; }
-    .navbar #menu #menu-grid a {
+    .navbar .menu .menu-grid a {
       color: #d6d5cb;
       font-weight: 500;
       text-transform: uppercase; }
@@ -1712,3 +1715,11 @@ h3:after {
       font-weight: 500;
       line-height: 1.7rem;
       margin-bottom: 0px; }
+
+/* Responsive
+---------------------------------------- */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none; }
+  .headermobile {
+    display: block; } }
