@@ -9,33 +9,37 @@
   </head>
   <body>
    <header class="navbar">
-    <div class="row">
-      <div class="medium-10 medium-offset-1 large-8 large-offset-2 columns menu">
-        <div class="row text-center menu-grid">
-          <div class="small-4 columns"><a href="index.html">cv</a></div>
-          <div class="small-4 columns"><a href="portfolio.html">portfolio</a></div>
-          <div class="small-4 columns"><a href="contact.html">contact</a></div>
+    <div class="header">
+      <div class="row">
+        <div class="medium-10 medium-offset-1 large-8 large-offset-2 columns menu">
+          <div class="row text-center menu-grid">
+            <div class="small-4 columns"><a href="index.html">cv</a></div>
+            <div class="small-4 columns"><a href="portfolio.html">portfolio</a></div>
+            <div class="small-4 columns"><a class="selected" href="contact.html">contact</a></div>
+          </div>
         </div>
-      </div>
+      </div>   
     </div>
-    <div class="headermobile mobile rows">
-        <div class="twelve columns">
-          <div class="pull-right">
-            <div id="releaseMenu">
+    <div class="headermobile mobile">
+      <div class="row">
+        <div class="small-12 columns">
+          <div class="float-right">
+            <div class="releaseMenu">
               <span></span>
               <span></span>
               <span></span>
               <span></span>
             </div>
           </div>
-            <ul class="menumobile u-cf">
-              <li><a href="#welcome">Accueil</a></li>
-              <li><a href="#about">à propos</a></li>
-              <li><a href="#competences">compétences</a></li>
-              <li ><a href="#portfolio">portfolio</a></li>
-              <li><a href="#contact">contact</a></li>
+          <span class="clearfix"></span>
+            <ul class="menumobile">
+              <li><a href="index.html">cv</a></li>
+              <li><a href="portfolio.html">portfolio</a></li>
+              <li><a class="selected" href="contact.html">contact</a></li>
             </ul>
         </div>
+        
+      </div>
       </div>
   </header>
   <section class="contact">
@@ -49,5 +53,7 @@
       </div>
     </div>
   </section>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
