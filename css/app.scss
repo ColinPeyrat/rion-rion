@@ -9,9 +9,9 @@
 @include foundation-typography;
 @include foundation-global-styles;
 @include foundation-float-classes;
+@include foundation-button;
 
 // ALL POSSIBLE INCLUDE WITH FOUNDATION
-// @include foundation-button;
 // @include foundation-visibility-classes;
 // @include foundation-accordion;
 // @include foundation-accordion-menu;
@@ -45,12 +45,52 @@
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
 
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-CondLight.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-CondBold.ttf');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-CondLightItalic.ttf');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('fonts/BebasNeue.otf');
+  font-style: normal;
+  font-weight: normal;
+}
 
 /* Global style
 ---------------------------------------- */
-
+body{
+	font-family: 'OpenSans';
+}
 h1,h2,h3,h4{
-	color: $primary-color;	
+	color: $primary-color;
+}
+h3{
+	line-height: 1em;
+}
+h3:after{
+	content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  margin : 0 0 $global-margin 0;
+  background: $secondary-color;
 }
 
 .headermobile{
@@ -64,9 +104,12 @@ h1,h2,h3,h4{
 
 /* Header style
 ---------------------------------------- */
+.navbar{
+  font-family: 'BebasNeue';
+}
+
 .navbar a.selected{
 	color:$primary-color;
-	font-weight:bold;
 }
 
 .navbar a{
@@ -74,6 +117,7 @@ h1,h2,h3,h4{
 	font-weight: 500;
 	text-transform: uppercase;
 	transition:all .2s  ease-out;
+
 	&:hover{
 		color:$primary-color;
 
@@ -81,20 +125,17 @@ h1,h2,h3,h4{
 }
 
 .header{
-	font-size:1.4rem;	
+	font-size:1.6em;
 	padding:$global-padding;
-	
 	.menu{
-
 		margin-top: 50px;
 		margin-bottom: 50px;
-
 		padding: $global-padding/2  $global-padding  $global-padding/2 $global-padding ;
 		border: 5px solid $primary-color;
-		
 	}
 }
 .headermobile{
+  font-size: 1.3em;
 	margin:$global-margin 0px;
 }
 .releaseMenu {
@@ -111,8 +152,7 @@ h1,h2,h3,h4{
   transition: .5s ease-in-out;
   cursor: pointer;
 }
-
- .releaseMenu span{
+.releaseMenu span{
   display: block;
   position: absolute;
   height: 6px;
@@ -180,25 +220,13 @@ h1,h2,h3,h4{
 		margin: 0px;
 		height: 35px;
 	}
-
 }
 
 /* CV
 ---------------------------------------- */
 
-h3:after{
-	content: "";
-    display: block;
-    height: 4px;
-    width: 100%;
-    margin : 0 0 $global-margin 0;
-    background: $secondary-color;
-}
-
 .cv{
-
 	.experience{
-
 		.mission{
 			h5{
 				color:$orange-color;
@@ -209,6 +237,15 @@ h3:after{
 				li{
 					margin-bottom: $global-margin/2;
 					list-style: none;
+					ul{
+						margin-left: $global-margin*1;
+						li{
+							list-style: none;
+							&:before{
+								content: '- ';
+							}
+						}
+					}
 				}
 			}
 		}
@@ -216,10 +253,15 @@ h3:after{
 
 	.formation{
 		margin-top: $global-margin;
+
 	}
-
-	.cv-item{
-
+.download{
+		margin:$global-margin*3 0 $global-margin;
+		a{
+			margin: 0;
+		}
+}
+.cv-item{
 		h4{
 			margin-bottom: 0px;
 		}
@@ -236,8 +278,13 @@ h3:after{
 				margin-bottom: $global-margin/4;
 			}
 			ul{
+			margin: 0;
+    	list-style-type: none;
 				li{
 					margin-bottom: $global-margin/2;
+					&:before{
+						content:'• '
+					}
 				}
 			}
 		}
@@ -245,46 +292,77 @@ h3:after{
 	}
 }
 
+/* Portfolio
+---------------------------------------- */
+.portfolio{
+	.portfolio-item{
+		margin: $global-margin*0.9 0;
+	}
+	.portfolio-thumbnail{
+		cursor: pointer;
+	}
+}
+
+/* Single Project
+---------------------------------------- */
+
+.project{
+	.project-thumbnail{
+  	@include breakpoint(small down) {
+			margin-bottom: $global-margin;
+		}
+	}
+	.project-date{
+		font-style: italic;
+		font-size: 1.1em;
+	}
+}
+
 /* Contact
 ---------------------------------------- */
 
 .contact{
-	margin-top:15vh;
+	margin:15vh 0;
 	font-size: 1.4rem;
 	.information{
 		color:$primary-color;
 		p{
 			font-weight: 500;
 			line-height: 1.7rem;
-			margin-bottom: 0px; 
+			margin-bottom: 0px;
 		}
 	}
 }
 
-/* Responsive
+/* Footer
+---------------------------------------- */
+.footer{
+	font-size: 13px;
+	margin-top: $global-margin*3;
+}
+.footer:before{
+	content: "";
+  display: block;
+  height: 3px;
+  width: 60%;
+	margin: $global-margin/2 auto;
+  background: $secondary-color;
+}
+
+/* Responsive Design
 ---------------------------------------- */
 
 
 @media screen and (max-width: 768px) {
 
+		// h3{
+		// 	line-height: 20px;
+		// }
+
     .header{
         display: none;
     }
-
     .headermobile  {
         display: block;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
